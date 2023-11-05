@@ -1,0 +1,20 @@
+
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+# Basic configuration.yaml entry
+binary_sensor:
+  - platform: rpi_gpio
+    sensors:
+      - port: 20
+        name: "Led GPIO"
+        unique_id: "led_gpio20"
+        bouncetime: 50
