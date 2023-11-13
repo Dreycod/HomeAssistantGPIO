@@ -11,10 +11,10 @@ script: !include scripts.yaml
 scene: !include scenes.yaml
 
 # Basic configuration.yaml entry
-binary_sensor:
+        
+switch:
   - platform: rpi_gpio
-    sensors:
+    switches:
       - port: 20
-        name: "Led GPIO"
-        unique_id: "led_gpio20"
-        bouncetime: 50
+        name: "Led Test"
+        unique_id: "1ed_gpio20manual"
